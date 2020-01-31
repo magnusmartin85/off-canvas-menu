@@ -2,27 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4e9dc6-50c2-4b3e-835e-c319eea9e83c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/off-canvas-menu.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_animations.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_base.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_colors.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_content.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_extends.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_links.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_rotate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_sidebar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_toggle.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/off-canvas-menu.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,5 +64,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="222" y="23" key="CommitChangelistDialog2" timestamp="1580502269851">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="222" y="23" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1580502269851" />
   </component>
 </project>
