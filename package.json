@@ -1,0 +1,17 @@
+{
+  "name": "off-canvas-menu",
+  "version": "1.0.0",
+  "description": "Simple Vanilla JS Off Canvas Menu",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglifyjs": "^0.6.2"
+  }
+}

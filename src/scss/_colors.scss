@@ -1,0 +1,23 @@
+$white:             #fff;
+$mischka:           #dadae5;
+$gray:              #838383;
+$trout:             #4b545d;
+$shark:             #212529;
+$main-font-color:   $shark;
+$black-07:          rgba(0, 0, 0, .7);
+
+
+// menu colors
+$ocm-color:        #37acff;
+$ocm-color-light:  lighten($ocm-color, 8%);
+$ocm-color-dark:   darken($ocm-color, 12%);
+
+// body
+$body-text-color:   $gray;
+
+// links
+$link-color:        #838383;
+$hover-color:       $white;
+$hover-color-2:     #595959;
+$header-color:      $white;
+

@@ -1,0 +1,21 @@
+@import 'colors';
+@import 'links';
+
+.ocm-sdb-icn-cls {
+  color: $white;
+  font-size: 1.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.ocm-sdb-icn-opn {
+  color: $gray;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.ocm-icn-row {
+  padding: .5rem 1rem 0;
+}

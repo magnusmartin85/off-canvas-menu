@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6a4e9dc6-50c2-4b3e-835e-c319eea9e83c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/off-canvas-menu.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_animations.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_colors.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_content.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_extends.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_links.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_rotate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_toggle.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1XAu1QvDNvba3nWrXvLoExmgX82" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a4e9dc6-50c2-4b3e-835e-c319eea9e83c" name="Default Changelist" comment="" />
+      <created>1580501004458</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580501004458</updated>
+      <workItem from="1580501005899" duration="230000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

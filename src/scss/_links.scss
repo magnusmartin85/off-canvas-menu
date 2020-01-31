@@ -1,0 +1,18 @@
+@import 'extends';
+
+.ocm-lnk-lvl-1 {
+  @extend %link-regular;
+  display: block;
+  padding: .6rem .5rem;
+}
+
+.ocm-lnk-lvl-2 {
+  @extend %link-regular;
+  display: block;
+  padding: .6rem .5rem;
+}
+
+.ocm-arw {
+  display: inline-block;
+  padding: 4px 6px;
+}
