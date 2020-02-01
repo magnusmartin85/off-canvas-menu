@@ -1,0 +1,57 @@
+@import 'extends';
+@import 'colors';
+@import 'variables';
+
+footer {
+  @extend .grid;
+  @extend .align-center;
+  background-color: $alabaster;
+  border-top: 1px solid $athens-gray;
+  font-family: $font-family-2-regular;
+  font-size: .8rem;
+  padding: 10px;
+}
+
+.footer-left-col {
+  @extend .col-12;
+  @extend .col-sm-8;
+  color: $main-font-color;
+  text-align: left;
+}
+
+.footer-right-col {
+  @extend .col-12;
+  @extend .col-sm-4;
+  color: $main-font-color;
+  text-align: left;
+}
+
+.footer-link {
+  @include links(
+                  $oslo-gray,
+                  $oslo-gray,
+                  $ui-color-1,
+                  $ui-color-1
+  );
+}
+
+.footer-menu-link {
+  color: $spun-pearl;
+  font-family: $font-family-2-bold;
+  font-size: .8rem;
+  font-weight: 700;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  text-decoration: none;
+  transition: color .5s ease-in-out;
+
+  &:hover {
+    color: $main-accent-color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $main-accent-color;
+    text-decoration: none;
+  }
+}
