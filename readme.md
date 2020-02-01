@@ -10,3 +10,7 @@
  
  ## Build
  For a production build run `gulp` on the command line. Files will be build to `dist` directory
+
+
+## Demo
+<a href="http://off-canvas-menu.mgnmrt.com/">Demo</a>
