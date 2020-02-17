@@ -1,5 +1,6 @@
 @import 'colors';
 
+/* abbreviations  */
 // arw - arrow
 // cls - close
 // cta - container
@@ -24,6 +25,7 @@ h1 {
 .container {
   margin: 0 auto;
   max-width: 800px;
+  min-height: 93vh;
 }
 
 .ocm-ovl {
