@@ -7,7 +7,7 @@ const uglify = require('gulp-uglifyjs');
 gulp.task('styles', () => {
     return gulp.src('./src/scss/index.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('watch', () => {
@@ -23,13 +23,13 @@ gulp.task('scripts', () => {
             presets: ['@babel/env']
         }))
         .pipe(concat('index.js'))
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('uglify', done => {
-    gulp.src('dist/js/index.js')
+    gulp.src('dist/index.js')
         .pipe(uglify('app.min.js'))
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist'));
     done();
 });
 
