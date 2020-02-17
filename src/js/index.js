@@ -32,7 +32,7 @@ function addCloseEvents(closingItems, sidebar, overlay, body) {
 
             overlay.style.opacity = '0';
             overlay.style.display = 'none';
-            body.style.overflow = 'hidden'; // Close Level 2 Items and rotate Arrows back to normal
+            body.style.overflow = '';
 
             let menuArrows = document.querySelectorAll('.' + classname_Arrow);
             let len = menuArrows.length;
