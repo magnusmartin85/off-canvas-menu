@@ -7,7 +7,7 @@ footer {
   background-color: $alabaster;
   border-top: 1px solid $athens-gray;
   display: flex;
-  font-family: $font-family-2-regular;
+  font-family: $font-family-2;
   font-size: .8rem;
   padding: 10px;
 }
@@ -28,8 +28,8 @@ footer {
 
 .footer-link {
   @include links(
-                  $oslo-gray,
-                  $oslo-gray,
+                  $spun-pearl,
+                  $spun-pearl,
                   $ui-color-1,
                   $ui-color-1
   );
@@ -37,7 +37,7 @@ footer {
 
 .footer-menu-link {
   color: $spun-pearl;
-  font-family: $font-family-2-bold;
+  font-family: $font-family-2;
   font-size: .8rem;
   font-weight: 700;
   padding-left: .5rem;
