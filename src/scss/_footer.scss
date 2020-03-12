@@ -12,33 +12,8 @@ footer {
   padding: 10px;
 }
 
-.footer-left-col {
-  @extend .col-12;
-  @extend .col-sm-8;
-  color: $main-font-color;
-  text-align: left;
-}
-
-.footer-right-col {
-  @extend .col-12;
-  @extend .col-sm-4;
-  color: $main-font-color;
-  text-align: left;
-}
-
-.footer-link {
-  @include links(
-                  $spun-pearl,
-                  $spun-pearl,
-                  $ui-color-1,
-                  $ui-color-1
-  );
-}
-
 .footer-menu-link {
   color: $spun-pearl;
-  font-family: $font-family-2;
-  font-size: .8rem;
   font-weight: 700;
   padding-left: .5rem;
   padding-right: .5rem;
