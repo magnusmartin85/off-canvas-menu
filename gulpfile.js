@@ -1,5 +1,6 @@
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
+const del = require('del');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglifyjs');
@@ -38,10 +39,28 @@ gulp.task('copyHtml', () => {
         .pipe(gulp.dest('dist'))
 });
 
+gulp.task('copyFiles', () => {
+    return gulp.src(['src/favicon.ico', 'src/manifest.json'])
+        .pipe(gulp.dest('dist'))
+});
+
+gulp.task('copyImg', () => {
+    return gulp.src('src/assets/img/**/*')
+        .pipe(gulp.dest('dist/assets/img'))
+});
+
+gulp.task('del', done => {
+    del('dist');
+    done();
+});
+
 gulp.task('default', gulp.parallel(
+    'del',
     'scripts',
     'styles',
-    'copyHtml'
+    'copyHtml',
+    'copyFiles',
+    'copyImg'
     )
 );
 
