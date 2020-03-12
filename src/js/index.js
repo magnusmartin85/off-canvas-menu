@@ -18,18 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     iconOpen.addEventListener('click', () => {
         let iconClose = document.querySelector('.' + classname_IconClose);
-        let closingArea = document.querySelector('.' + classname_SidebarHeader);
-        let closingItems = [iconClose, closingArea];
+        let closingItems = [iconClose];
         openMenu(sidebar, overlay, body);
         addCloseEvents(closingItems, sidebar, overlay, body);
     });
 });
 
 function addCloseEvents(closingItems, sidebar, overlay, body) {
+    // Hide overlay
     for (let i = 0; i < closingItems.length; i++) {
         closingItems[i].addEventListener('click', () => {
-            sidebar.className = classname_Sidebar + ' ocm-hide'; // Hide overlay
-
+            sidebar.className = classname_Sidebar + ' ocm-hide';
             overlay.style.opacity = '0';
             overlay.style.display = 'none';
             body.style.overflow = '';
@@ -59,6 +58,7 @@ function openMenu(sidebar, overlay, body) {
     sidebar.className = classname_Sidebar + ' ocm-show';
     overlay.style.opacity = '1';
     overlay.style.display = 'block';
+    setPageYOffset();
 }
 
 function handleClickLvl1(evt) {
@@ -70,5 +70,13 @@ function handleClickLvl1(evt) {
     } else {
         evt.currentTarget.closest('.' + classname_LinkLevel1).parentNode.childNodes[3].style.display = 'block';
         evt.currentTarget.closest('.' + classname_LinkLevel1).childNodes[1].classList.add('rotate-90');
+    }
+}
+
+function setPageYOffset() {
+    if (classname_Sidebar.length === 0) {
+        window.requestAnimationFrame(setPageYOffset);
+    } else {
+        document.getElementsByClassName(classname_Sidebar)[0].style.top = window.pageYOffset.toString() + 'px';
     }
 }
