@@ -1,0 +1,29 @@
+// abbreviations
+// arw - arrow
+// cls - close
+// cta - container
+// cnt - content
+// hdr - header
+// itm - item
+// lst - list
+// opn - open
+// ovl - overlay
+// sdb - sidebar
+// wrp - wrap
+
+body {
+  color: $main-font-color;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  color: $ocm-color-dark;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  min-height: 93vh;
+}
+

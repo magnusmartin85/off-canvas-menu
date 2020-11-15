@@ -1,0 +1,16 @@
+.logo {
+  border-bottom: 3px solid $main-accent-color;
+  color: $main-font-color;
+  display: block;
+  font-family: $font-family-1;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: .4rem;
+  transition: color .5s ease-in-out;
+  width: 26px;
+
+  &:hover {
+    color: lighten($main-font-color, 12%);
+    text-decoration: none;
+  }
+}

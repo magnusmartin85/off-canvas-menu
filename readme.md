@@ -1,16 +1,17 @@
 # Off Canvas Menu
- This is a simple Vanilla JS off canvas menu. 
+ This is a simple Vanilla JS off-canvas menu. 
+ 
+ ## Dependencies
+The only dependency is [normalize.css](https://necolas.github.io/normalize.css).
  
  ## Installation
- Run `npm install` on the command line. 
- This will install gulp and other gulp modules.
- 
+For installation cd into the project root and run `npm install`.
+
  ## Development
- Run `gulp watch` to automatically transpile SCSS and JS files on file changes.
+To serve on localhost run `npm run start` on the command line.
  
  ## Build
- For a production build run `gulp` on the command line. Files will be build to `dist` directory
-
+For a production build run `npm run build` on the command line.
 
 ## Demo
-<a href="http://off-canvas-menu.mgnmrt.com/">Demo</a>
+[Demo](http://off-canvas-menu.mgnmrt.com)

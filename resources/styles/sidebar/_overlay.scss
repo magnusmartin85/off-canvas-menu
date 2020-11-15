@@ -1,0 +1,10 @@
+.ocm-ovl {
+  background-color: $black-07;
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  transition: opacity .5s ease;
+  width: 100%;
+  z-index: 99;
+}

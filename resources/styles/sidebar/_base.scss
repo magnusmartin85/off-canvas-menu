@@ -1,0 +1,13 @@
+.ocm-sdb {
+  background-color: $white;
+  float: left;
+  font-size: 1.2rem;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform .4s cubic-bezier(.7, 0, .3, 1) 0s;
+  width: 70%;
+  z-index: 999;
+}

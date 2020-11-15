@@ -1,0 +1,16 @@
+.ocm-sdb-wrp {
+  box-shadow: 0 0 10px $trout;
+  height: 100vh;
+  width: 100%;
+}
+
+.ocm-sdb-wrp-hdr {
+  align-items: center;
+  background-color: $ocm-color-dark;
+  border-bottom: 1px solid $ocm-color;
+  color: $white;
+  display: flex;
+  font-size: .9rem;
+  justify-content: space-between;
+  padding: 2rem;
+}

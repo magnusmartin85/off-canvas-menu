@@ -1,0 +1,38 @@
+// shades of gray
+$alabaster: #f8f8f8;
+$alto: #babab5;
+$athens-gray: #e9ecef;
+$gray: #838383;
+$spun-pearl: #aaaaaf;
+$main-font-color: #4e565f;
+$oslo-gray: #828a92;
+$trout: #4b545d;
+$white: #fff;
+
+// shades of black
+$black: #000;
+$black-06: rgba(0, 0, 0, .6);
+$black-07: rgba(0, 0, 0, .7);
+$black-08: rgba(0, 0, 0, .8);
+$black-09: rgba(0, 0, 0, .9);
+
+// blue
+$lochmara: #027cd2;
+$dodger-blue: #3090f7;
+$picton-blue: #2f8fe9;
+
+// body
+$body-text-color: $gray;
+
+// link colors
+$header-color: $white;
+$hover-color-2: #595959;
+$hover-color: $white;
+$link-color: #838383;
+
+// menu colors
+$ocm-color: $dodger-blue;
+$ocm-color-dark: darken($ocm-color, 12%);
+$ocm-color-light: lighten($ocm-color, 8%);
+$main-accent-color: $dodger-blue;
+$ui-color-1: $picton-blue;

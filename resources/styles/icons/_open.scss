@@ -1,0 +1,42 @@
+.ocm-sdb-icn-opn-wrp {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  height: 30px;
+  padding: 0;
+  position: absolute;
+  width: 34px;
+  z-index: 1;
+}
+
+.ocm-sdb-icn-opn {
+  background: $gray;
+  border-radius: 4px;
+  height: 3px;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+
+  &::before,
+  &::after {
+    background: $gray;
+    border-radius: 4px;
+    height: 3px;
+    position: absolute;
+    width: 100%;
+  }
+
+  &::before {
+    content: ' ';
+    left: 0;
+    top: -9px;
+    width: 14px;
+  }
+
+  &::after {
+    bottom: -10px;
+    content: ' ';
+    right: 0;
+    width: 14px;
+  }
+}
