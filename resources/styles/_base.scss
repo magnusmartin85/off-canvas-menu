@@ -13,12 +13,32 @@
 
 body {
   color: $main-font-color;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-family-1;
 }
 
 h1 {
   color: $ocm-color-dark;
+  font-family: $font-family-2;
+  letter-spacing: .1rem;
   margin: 0;
+}
+
+a {
+  &:link {
+    color: $picton-blue;
+  }
+
+  &:visited {
+    color: $picton-blue;
+  }
+
+  &:hover {
+    color: $lochmara;
+  }
+
+  &:active {
+    color: $lochmara;
+  }
 }
 
 .container {
@@ -26,4 +46,3 @@ h1 {
   max-width: 800px;
   min-height: 93vh;
 }
-
