@@ -64,10 +64,10 @@ function handleClickLvl1(evt) {
     let isOpenLevel1 = evt.currentTarget.closest('.' + classname_LinkLevel1).nextElementSibling.style.display === 'block';
 
     if (isOpenLevel1) {
-        evt.currentTarget.closest('.' + classname_LinkLevel1).parentNode.childNodes[3].style.display = 'none';
+        evt.currentTarget.closest('.' + classname_LinkLevel1).parentNode.childNodes[1].style.display = 'none';
         evt.currentTarget.closest('.' + classname_LinkLevel1).childNodes[1].classList.remove('rotate-90');
     } else {
-        evt.currentTarget.closest('.' + classname_LinkLevel1).parentNode.childNodes[3].style.display = 'block';
+        evt.currentTarget.closest('.' + classname_LinkLevel1).parentNode.childNodes[1].style.display = 'block';
         evt.currentTarget.closest('.' + classname_LinkLevel1).childNodes[1].classList.add('rotate-90');
     }
 }
