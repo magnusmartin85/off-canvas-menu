@@ -9,19 +9,31 @@ footer {
 }
 
 .footer-menu-link {
-  color: $spun-pearl;
   font-weight: 700;
   padding-left: .5rem;
   padding-right: .5rem;
   text-decoration: none;
   transition: color .5s ease-in-out;
 
+  &:focus {
+    color: $main-accent-color;
+    text-decoration: none;
+  }
+
+  &:link {
+    color: $main-font-color;
+  }
+
+  &:visited {
+    color: $main-font-color;
+  }
+
   &:hover {
     color: $main-accent-color;
     text-decoration: none;
   }
 
-  &:focus {
+  &:active {
     color: $main-accent-color;
     text-decoration: none;
   }
