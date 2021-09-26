@@ -1,14 +1,20 @@
-// CLOSE_OTHER_SUBMENUS:
-// * submenus with css class '.ocm-lst-lvl-1' are closed when open another submenu (click on .ocm-lnk-lvl-1).
-// * in other words: only one submenu can be open at a time.
+/**
+ * Level 1 lists with css class '.ocm-lst-lvl-1' are closed when another level 1 lists is opened.
+ * Only one level 1 list can be open at once.
+ * @type {boolean}
+ */
 const CLOSE_OTHER_SUBMENUS = false;
 
-// CLOSE_MENU_ON_OVERLAY_CLICK
-// * close menu after click on overlay (.ocm-ovl).
+/**
+ * Close menu after click on overlay (css class '.ocm-ovl').
+ * @type {boolean}
+ */
 const CLOSE_MENU_ON_OVERLAY_CLICK = false;
 
-// CLOSE_SUBMENUS_ON_MENU_CLOSE
-// * close all submenus when menu closes.
+/**
+ * Close all level 1 lists when menu closes.
+ * @type {boolean}
+ */
 const CLOSE_SUBMENUS_ON_MENU_CLOSE = false;
 
 export {

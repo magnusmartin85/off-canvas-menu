@@ -7,8 +7,14 @@ import {
 } from './constants';
 import {CLOSE_OTHER_SUBMENUS, CLOSE_SUBMENUS_ON_MENU_CLOSE} from './config';
 
+/**
+ *
+ * @param closingItems
+ * @param sidebar
+ * @param overlay
+ * @param body
+ */
 function addCloseEvents(closingItems, sidebar, overlay, body) {
-    // Hide overlay
     for (let i = 0; i < closingItems.length; i++) {
         closingItems[i].addEventListener('click', () => {
             hideSidebar(sidebar);
@@ -21,6 +27,10 @@ function addCloseEvents(closingItems, sidebar, overlay, body) {
     }
 }
 
+/**
+ *
+ * @param linkLevel1
+ */
 function addEventsLvl1(linkLevel1) {
     for (let i = 0; i < linkLevel1.length; i++) {
         if (linkLevel1[i].children.length > 0) {
@@ -31,6 +41,12 @@ function addEventsLvl1(linkLevel1) {
     }
 }
 
+/**
+ *
+ * @param sidebar
+ * @param overlay
+ * @param body
+ */
 function openMenu(sidebar, overlay, body) {
     body.style.overflow = 'hidden';
     sidebar.className = CLASSNAME_SIDEBAR + ' ocm-show';
@@ -39,6 +55,10 @@ function openMenu(sidebar, overlay, body) {
     setPageYOffset();
 }
 
+/**
+ *
+ * @param evt
+ */
 function handleClickLvl1(evt) {
     let isOpenLevel1 = evt.currentTarget.closest('.' + CLASSNAME_LINK_LEVEL_1).nextElementSibling.style.display === 'block';
 
@@ -53,6 +73,9 @@ function handleClickLvl1(evt) {
     }
 }
 
+/**
+ *
+ */
 function setPageYOffset() {
     if (CLASSNAME_SIDEBAR.length === 0) {
         window.requestAnimationFrame(setPageYOffset);
@@ -61,6 +84,9 @@ function setPageYOffset() {
     }
 }
 
+/**
+ *
+ */
 function rotateMenuArrowsBack() {
     let menuArrows = document.querySelectorAll('.' + CLASSNAME_ARROW);
     let len = menuArrows.length;
@@ -70,15 +96,26 @@ function rotateMenuArrowsBack() {
     }
 }
 
+/**
+ *
+ * @param sidebar
+ */
 function hideSidebar(sidebar) {
     sidebar.className = CLASSNAME_SIDEBAR + ' ' + CLASSNAME_OCM_HIDE;
 }
 
+/**
+ *
+ * @param overlay
+ */
 function hideOverlay(overlay) {
     overlay.style.opacity = '0';
     overlay.style.display = 'none';
 }
 
+/**
+ *
+ */
 function closeAllSubmenus() {
     const submenuItems = document.querySelectorAll('.' + CLASSNAME_SUBMENU_LEVEL_1);
     for (let i = 0; i < submenuItems.length; i++) {
