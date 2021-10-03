@@ -1,8 +1,11 @@
-.ocm-sdb-icn-cls {
+@import '../config/colors';
+
+.icon-close {
   height: 32px;
   opacity: .7;
   position: absolute;
-  right: 32px;
+  right: 12px;
+  top: 16px;
   width: 32px;
 
   &::before,
@@ -10,7 +13,7 @@
     background-color: $white;
     border-radius: 4px;
     content: ' ';
-    height: 28px;
+    height: 20px;
     left: 15px;
     position: absolute;
     width: 3px;

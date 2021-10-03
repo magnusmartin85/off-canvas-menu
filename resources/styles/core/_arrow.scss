@@ -1,0 +1,10 @@
+.link-arrow {
+  align-items: center;
+  display: inline-flex;
+  font-size: 24px;
+  padding: 1px 4px 4px;
+
+  &.rotate-90 {
+    padding-bottom: 4px;
+  }
+}

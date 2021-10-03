@@ -1,15 +1,24 @@
-.ocm-sdb-icn-opn-wrp {
+@import '../config/colors';
+
+.icon-open-row {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 40px;
+}
+
+.icon-open-container {
   background: none;
   border: 0;
   cursor: pointer;
   height: 30px;
   padding: 0;
   position: absolute;
+  top: 28px;
   width: 34px;
   z-index: 1;
 }
 
-.ocm-sdb-icn-opn {
+.icon-open {
   background: $gray;
   border-radius: 4px;
   height: 3px;
