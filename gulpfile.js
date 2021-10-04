@@ -36,7 +36,7 @@ gulp.task('html', () => {
 gulp.task('sass', () => {
   return gulp.src([
     src_assets_folder + 'styles/off-canvas-menu.scss'
-  ], {since: gulp.lastRun('sass')})
+  ])
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(dependents())

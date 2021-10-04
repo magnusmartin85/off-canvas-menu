@@ -1,51 +1,19 @@
 @import '../config/colors';
 
-.icon-open-row {
+.icon-open-container {
+  align-items: center;
+  cursor: pointer;
   display: flex;
   flex-wrap: nowrap;
+}
+
+.icon-open-col-1 {
+  flex-grow: 0;
+  font-size: 30px;
   height: 40px;
 }
 
-.icon-open-container {
-  background: none;
-  border: 0;
-  cursor: pointer;
-  height: 30px;
-  padding: 0;
-  position: absolute;
-  top: 28px;
-  width: 34px;
-  z-index: 1;
-}
-
-.icon-open {
-  background: $gray;
-  border-radius: 4px;
-  height: 3px;
-  position: absolute;
-  top: 10px;
-  width: 100%;
-
-  &::before,
-  &::after {
-    background: $gray;
-    border-radius: 4px;
-    height: 3px;
-    position: absolute;
-    width: 100%;
-  }
-
-  &::before {
-    content: ' ';
-    left: 0;
-    top: -9px;
-    width: 14px;
-  }
-
-  &::after {
-    bottom: -10px;
-    content: ' ';
-    right: 0;
-    width: 14px;
-  }
+.icon-open-col-2 {
+  font-weight: bold;
+  padding-left: 10px;
 }
