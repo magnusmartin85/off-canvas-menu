@@ -6,7 +6,6 @@ import {
 } from './constants';
 import {CLOSE_MENU_ON_BACKDROP_CLICK, CLOSE_OTHER_SUBMENUS, CLOSE_SUBMENUS_ON_MENU_CLOSE} from './config';
 
-
 /**
  *
  */
@@ -17,10 +16,10 @@ function addBackdropToDom() {
 }
 
 /**
- *
- * @param closingItems
- * @param sidebar
- * @param body
+ * Add close events to provided closingItems e.g. backdrop and close icon.
+ * @param {array} closingItems - DOM Elements that make the menu close.
+ * @param {object} sidebar - DOM Element which contains the menu.
+ * @param {object} body - DOM Element which contains the body.
  */
 function addCloseEvents(closingItems, sidebar, body) {
   if (CLOSE_MENU_ON_BACKDROP_CLICK) {
@@ -40,13 +39,13 @@ function addCloseEvents(closingItems, sidebar, body) {
 }
 
 /**
- *
- * @param linkLevel1
+ * Attach click listener to level 1 menu item links.
+ * @param {NodeList} level1Links - List of level 1 links.
  */
-function addEventsLvl1(linkLevel1) {
-  for (let i = 0; i < linkLevel1.length; i++) {
-    if (linkLevel1[i].children.length > 0) {
-      linkLevel1[i].addEventListener('click', evt => {
+function addEventsForLevel1Links(level1Links) {
+  for (let i = 0; i < level1Links.length; i++) {
+    if (level1Links[i].children.length > 0) {
+      level1Links[i].addEventListener('click', evt => {
         handleClickLvl1(evt);
       });
     }
@@ -83,7 +82,7 @@ function handleClickLvl1(evt) {
 
 /**
  *
- * @param sidebar
+ * @param {object} sidebar - DOM Element which contains the menu.
  */
 function handleSidebar(sidebar) {
   sidebar.className = CLASSNAME_SIDEBAR + ' show';
@@ -92,7 +91,7 @@ function handleSidebar(sidebar) {
 
 /**
  *
- * @param sidebar
+ * @param {object} sidebar - DOM Element which contains the menu.
  */
 function hideSidebar(sidebar) {
   sidebar.className = CLASSNAME_SIDEBAR;
@@ -100,7 +99,7 @@ function hideSidebar(sidebar) {
 
 /**
  *
- * @param body
+ * @param {object} body - DOM Element which contains the body.
  */
 function makeBodyScrollable(body) {
   body.style.overflow = '';
@@ -108,8 +107,8 @@ function makeBodyScrollable(body) {
 
 /**
  *
- * @param sidebar
- * @param body
+ * @param {object} sidebar - DOM Element which contains the menu.
+ * @param {object} body - DOM Element which contains the body.
  */
 function openMenu(sidebar, body) {
   preventBodyFromScrolling(body);
@@ -119,8 +118,8 @@ function openMenu(sidebar, body) {
 }
 
 /**
- *
- * @param body
+ * s
+ * @param {object} body - DOM Element which contains the body.
  */
 function preventBodyFromScrolling(body) {
   body.style.overflow = 'hidden';
@@ -159,7 +158,7 @@ function setPageYOffset() {
 
 export {
   addCloseEvents,
-  addEventsLvl1,
+  addEventsForLevel1Links,
   openMenu,
   handleClickLvl1
 };
