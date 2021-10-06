@@ -1,18 +1,18 @@
 /**
- * Level 1 lists with css class '.core-lst-lvl-1' are closed when another level 1 lists is opened.
- * Only one level 1 list can be open at once.
+ * Level 1 link lists with css class 'link-level-1' are closed when another level 1 lists is clicked.
+ * Only one level 1 link list can be open at once.
  * @type {boolean}
  */
 const CLOSE_OTHER_SUBMENUS = false;
 
 /**
- * Close menu after click on overlay (css class '.core-ovl').
+ * Close menu after click on backdrop (css class 'off-canvas-backdrop).
  * @type {boolean}
  */
 const CLOSE_MENU_ON_BACKDROP_CLICK = true;
 
 /**
- * Close all level 1 lists when menu closes.
+ * Close all level 1 lists when menu is closed.
  * @type {boolean}
  */
 const CLOSE_SUBMENUS_ON_MENU_CLOSE = true;
