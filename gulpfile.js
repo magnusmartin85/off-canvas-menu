@@ -9,7 +9,6 @@ const minifyCss = require('gulp-clean-css');
 const plumber = require('gulp-plumber');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
 const webpack = require('webpack-stream');
 const src_folder = './resources/';
 const src_assets_folder = src_folder + '';
