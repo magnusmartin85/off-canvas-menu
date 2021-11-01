@@ -1,7 +1,7 @@
 {
   "name": "off-canvas-menu",
   "version": "1.0.0",
-  "description": "Simple Vanilla JS Off-Canvas-Menu",
+  "description": "Vanilla JavaScript Off-Canvas-Menu",
   "scripts": {
     "serve": "gulp"
   },
@@ -11,11 +11,14 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
+    "@babel/register": "^7.16.0",
     "browser-sync": "^2.27.5",
     "del": "^6.0.0",
     "eslint": "^7.32.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
+    "core-js": "^3.18.3",
+    "esm": "^3.2.25",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
