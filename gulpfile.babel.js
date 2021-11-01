@@ -1,20 +1,27 @@
-const autoprefixer = require('gulp-autoprefixer');
-const babel = require('gulp-babel');
-const browserSync = require('browser-sync').create();
-const concat = require('gulp-concat');
-const del = require('del');
-const dependents = require('gulp-dependents');
-const gulp = require('gulp');
-const minifyCss = require('gulp-clean-css');
-const plumber = require('gulp-plumber');
-const rename = require('gulp-rename');
-const sass = require('gulp-sass')(require('sass'));
-const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
-const webpack = require('webpack-stream');
-const node_dependencies = Object.keys(require('./package.json').dependencies || {});
+// Gulp
+import gulp from 'gulp';
 
-// directories
+// Plugins
+import autoprefixer from 'gulp-autoprefixer';
+import babel from 'gulp-babel';
+import browserSync from 'browser-sync';
+import concat from 'gulp-concat';
+import dartSass from 'sass'
+import del from 'del';
+import dependents from 'gulp-dependents';
+import gulpSass from 'gulp-sass'
+import minifyCss from 'gulp-clean-css';
+import plumber from 'gulp-plumber';
+import rename from 'gulp-rename';
+import sourcemaps from 'gulp-sourcemaps';
+import uglify from 'gulp-uglify';
+import webpack from 'webpack-stream';
+import {dependencies} from './package.json';
+
+const sass = gulpSass(dartSass);
+const node_dependencies = Object.keys(dependencies);
+
+// Directories
 const dist_folder = './dist/';
 const dist_node_modules_folder = dist_folder + 'node_modules/';
 const node_modules_folder = './node_modules/';
