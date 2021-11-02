@@ -13,3 +13,12 @@
   display: flex;
   font-size: 14px;
 }
+
+.content-link {
+  @include links(
+      $ui-color-1,
+      $ui-color-1,
+      lighten($ui-color-1, 10%),
+      lighten($ui-color-1, 10%)
+  );
+}
