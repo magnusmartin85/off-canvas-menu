@@ -14,28 +14,28 @@ export default [
         level: 1,
         title: "UX-Design",
         href: "#",
-        children:  [
+        children: [
           {
             level: 2,
             title: "asasas",
             href: "#",
-            children: []
-          }
-        ]
+            children: [],
+          },
+        ],
       },
       {
         level: 1,
         title: "Webdesign",
         href: "#",
-        children:  []
+        children: [],
       },
       {
         level: 1,
         title: "Content Marketing",
         href: "#",
-        children:  []
-      }
-    ]
+        children: [],
+      },
+    ],
   },
   {
     level: 0,
@@ -45,26 +45,26 @@ export default [
         level: 1,
         title: "John",
         href: "#",
-        children:  []
+        children: [],
       },
       {
         level: 1,
         title: "Peter",
         href: "#",
-        children:  []
+        children: [],
       },
       {
         level: 1,
         title: "Michael",
         href: "#",
-        children:  []
-      }
-    ]
+        children: [],
+      },
+    ],
   },
   {
     level: 0,
     title: "Contact",
     href: "#",
-    children: []
+    children: [],
   },
-]
+];
