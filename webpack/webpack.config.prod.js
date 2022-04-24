@@ -9,23 +9,22 @@ module.exports = merge(common, {
   stats: "errors-only",
   bail: true,
   output: {
-    filename: "js/off-canvas-menu.min.js"
+    filename: "js/off-canvas-menu.min.js",
   },
   plugins: [
     new Webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production")
+      "process.env.NODE_ENV": JSON.stringify("production"),
     }),
     new MiniCssExtractPlugin({
-      filename: "css/[name].[chunkhash:8].css",
-      chunkFilename: "css/[name].[chunkhash:8].chunk.js"
-    })
+      filename: "css/off-canvas-menu.min.css",
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: "babel-loader"
+        use: "babel-loader",
       },
       {
         test: /\.s?css/i,
@@ -33,9 +32,9 @@ module.exports = merge(common, {
           MiniCssExtractPlugin.loader,
           "css-loader",
           "postcss-loader",
-          "sass-loader"
-        ]
-      }
-    ]
-  }
+          "sass-loader",
+        ],
+      },
+    ],
+  },
 });
