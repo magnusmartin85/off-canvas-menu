@@ -20,11 +20,6 @@
 }
 
 %link-regular {
-  @include links(
-      $trout,
-      $trout,
-      $ocm-color-dark,
-      $ocm-color-dark
-  );
+  @include links($trout, $trout, $ocm-color-dark, $ocm-color-dark);
   padding: 10px;
 }

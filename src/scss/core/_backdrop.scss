@@ -2,10 +2,11 @@
   background-color: $black;
   height: 100vh;
   left: 0;
-  opacity: .5;
+  opacity: 0.5;
   position: fixed;
   top: 0;
-  transition: opacity .15s linear;
+  transition: opacity 0.15s linear;
   width: 100vw;
   z-index: 1040;
 }
+

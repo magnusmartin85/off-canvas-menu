@@ -1,4 +1,4 @@
-@import '../config/extends';
+@import "../config/extends";
 
 .link-level-1 {
   @extend %link-regular;
@@ -17,9 +17,9 @@
 
 .content-link {
   @include links(
-      $ui-color-1,
-      $ui-color-1,
-      lighten($ui-color-1, 10%),
-      lighten($ui-color-1, 10%)
+    $ui-color-1,
+    $ui-color-1,
+    lighten($ui-color-1, 10%),
+    lighten($ui-color-1, 10%)
   );
 }

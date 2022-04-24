@@ -1,8 +1,8 @@
-@import '../config/colors';
+@import "../config/colors";
 
 .icon-close {
   height: 32px;
-  opacity: .7;
+  opacity: 0.7;
   position: absolute;
   right: 12px;
   top: 14px;
@@ -12,7 +12,7 @@
   &::after {
     background-color: $white;
     border-radius: 4px;
-    content: ' ';
+    content: " ";
     height: 20px;
     left: 15px;
     position: absolute;
