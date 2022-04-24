@@ -8,11 +8,11 @@ For installation cd into the project root and run `npm install`.
 
 ## Development
 
-To serve on localhost run `npm start` on the command line.
+To serve on localhost run `npm run start` on the command line.
 
 ## Build
 
-For a production build run `npm build` on the command line.
+For a production build run `npm run build` on the command line.
 
 ## Demo
 
