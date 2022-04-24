@@ -23,76 +23,75 @@ class MarkupGenerator {
 
   generateMarkup() {
     let result = "";
-    result += `<nav class="off-canvas-nav">`;
-    result += `<ul class="list-level-0">`;
+    result += "<nav class=\"off-canvas-nav\">";
+    result += "<ul class=\"list-level-0\">";
 
     menuStructure &&
-      menuStructure.forEach((menuItem) => {
-        const childrenLevel0 = menuItem && menuItem.children;
-        const hasChildrenLevel0 = childrenLevel0.length > 0;
+    menuStructure.forEach((menuItem) => {
+      const childrenLevel0 = menuItem && menuItem.children;
+      const hasChildrenLevel0 = childrenLevel0.length > 0;
 
-        result += this.getListItemMarkup(menuItem);
+      result += this.getListItemMarkup(menuItem);
 
-        if (hasChildrenLevel0) {
-          result += this.getOpeningListMarkup(menuItem);
+      if (hasChildrenLevel0) {
+        result += this.getOpeningListMarkup(menuItem);
+      }
+
+      childrenLevel0 &&
+      childrenLevel0.forEach((childLevel1) => {
+        result += this.getListItemMarkup(childLevel1);
+        const childrenLevel1 = childLevel1 && childLevel1.children;
+        const hasChildrenLevel1 = childrenLevel1.length > 0;
+
+        if (hasChildrenLevel1) {
+          result += this.getOpeningListMarkup(childLevel1);
         }
 
-        childrenLevel0 &&
-          childrenLevel0.forEach((childLevel1) => {
-            result += this.getListItemMarkup(childLevel1);
-            const childrenLevel1 = childLevel1 && childLevel1.children;
-            const hasChildrenLevel1 = childrenLevel1.length > 0;
+        childrenLevel1 &&
+        childrenLevel1.forEach((childLevel2) => {
+          result += this.getListItemMarkup(childLevel2);
+          const childrenLevel2 = childLevel2 && childLevel2.children;
+          const hasChildrenLevel2 = childrenLevel1.length > 0;
 
-            if (hasChildrenLevel1) {
-              result += this.getOpeningListMarkup(childLevel1);
-            }
+          if (hasChildrenLevel2) {
+            result += this.getOpeningListMarkup(childLevel2);
+          }
 
-            childrenLevel1 &&
-              childrenLevel1.forEach((childLevel2) => {
-                result += this.getListItemMarkup(childLevel2);
-                const childrenLevel2 = childLevel2 && childLevel2.children;
-                const hasChildrenLevel2 = childrenLevel1.length > 0;
-
-                if (hasChildrenLevel2) {
-                  result += this.getOpeningListMarkup(childLevel2);
-                }
-
-                childrenLevel2 &&
-                  childrenLevel2.forEach((childLevel2) => {
-                    result += this.getListItemMarkup(childLevel2);
-                  });
-
-                if (hasChildrenLevel2) {
-                  result += `</ul>`;
-                }
-              });
-
-            if (hasChildrenLevel1) {
-              result += `</ul>`;
-            }
+          childrenLevel2 &&
+          childrenLevel2.forEach((childLevel2) => {
+            result += this.getListItemMarkup(childLevel2);
           });
 
-        if (hasChildrenLevel0) {
-          result += `</ul>`;
+          if (hasChildrenLevel2) {
+            result += "</ul>";
+          }
+        });
+
+        if (hasChildrenLevel1) {
+          result += "</ul>";
         }
       });
 
-    result += `</ul>`;
-    result += `</nav>`;
-    console.warn(result);
+      if (hasChildrenLevel0) {
+        result += "</ul>";
+      }
+    });
+
+    result += "</ul>";
+    result += "</nav>";
     return result;
   }
 
   getListItemMarkup(menuItem) {
     const level = menuItem && menuItem.level;
-    const toggleIcon = `<span class="link-arrow">&#8250;</span>`;
+    const toggleIcon = "<span class=\"link-arrow\">&#8250;</span>";
     const icon = menuItem.children.length > 0 ? toggleIcon : "";
 
     return `<li class="list-item">
-                    <a href="#" class="link-level-${level + 1}">
-                        ${menuItem.title} ${icon}
-                    </a>
-                 </li>`;
+              <a href="#" class="link-level-${level + 1}">
+                ${menuItem.title} ${icon}
+              </a>
+              </li>`;
   }
 
   getOpeningListMarkup(menuItem) {

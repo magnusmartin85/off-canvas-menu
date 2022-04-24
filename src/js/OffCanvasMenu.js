@@ -6,7 +6,7 @@ import {
   CLASSNAME_LINK_LEVEL,
   CLASSNAME_SIDEBAR,
   CLASSNAME_SUBMENU_LEVEL,
-  MENU_TITLE,
+  MENU_TITLE
 } from "./constants";
 import MarkupGenerator from "./MarkupGenerator/MarkupGenerator";
 
@@ -114,12 +114,12 @@ class OffCanvasMenu {
    */
   addEventsForLinks(links, level) {
     links &&
-      links.forEach((link) => {
-        link &&
-          link.addEventListener("click", (evt) => {
-            this.handleClickOnLevel(evt, level);
-          });
+    links.forEach((link) => {
+      link &&
+      link.addEventListener("click", (evt) => {
+        this.handleClickOnLevel(evt, level);
       });
+    });
   }
 
   closeAllSubmenus() {
@@ -127,7 +127,7 @@ class OffCanvasMenu {
       "." + CLASSNAME_SUBMENU_LEVEL[1],
       "." + CLASSNAME_SUBMENU_LEVEL[2]
     );
-    console.warn(submenuItems);
+
     for (let i = 0; i < submenuItems.length; i++) {
       submenuItems[i].style.display = "none";
     }
@@ -243,7 +243,7 @@ class OffCanvasMenu {
 
       observer.observe(document.body, {
         childList: true,
-        subtree: true,
+        subtree: true
       });
     });
   }
