@@ -34,7 +34,7 @@ $link-color: #838383;
 
 // menu colors
 $ocm-color: $dodger-blue;
-$ocm-color-dark: color.adjust($ocm-color, $lightness: -12);
-$ocm-color-light: color.adjust($ocm-color, $lightness: 8);
+$ocm-color-dark: color.adjust($ocm-color, $lightness: -12%);
+$ocm-color-light: color.adjust($ocm-color, $lightness: 8%);
 $main-accent-color: $dodger-blue;
 $ui-color-1: $picton-blue;
