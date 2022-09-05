@@ -6,3 +6,4 @@ import "../scss/off-canvas-menu.scss";
 const menu = new OffCanvasMenu(MENU_ID, false, true, true);
 
 menu.init();
+

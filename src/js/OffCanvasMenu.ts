@@ -1,27 +1,17 @@
-import {
-  CLASSNAME_ARROW,
-  CLASSNAME_BACKDROP,
-  CLASSNAME_ICON_CLOSE,
-  CLASSNAME_ICON_OPEN,
-  CLASSNAME_LINK_LEVEL,
-  CLASSNAME_SIDEBAR,
-  CLASSNAME_SUBMENU_LEVEL,
-  MENU_TITLE
-} from "./constants";
+import { CSS_CLASSES, MENU_TITLE } from "./constants";
 import MarkupGenerator from "./MarkupGenerator/MarkupGenerator";
 
 class OffCanvasMenu {
-  /**
-   * @param {string} menuId
-   * @param {boolean} closeOtherSubmenus
-   * @param {boolean} closeMenuOnBackdropClick
-   * @param {boolean} closeSubmenusOnMenuClose
-   */
+  private menuId: string;
+  private readonly closeOtherSubmenus: boolean;
+  private readonly closeMenuOnBackdropClick: boolean;
+  private readonly closeSubmenusOnMenuClose: boolean;
+
   constructor(
-    menuId,
-    closeOtherSubmenus,
-    closeMenuOnBackdropClick,
-    closeSubmenusOnMenuClose
+    menuId: string,
+    closeOtherSubmenus: boolean,
+    closeMenuOnBackdropClick: boolean,
+    closeSubmenusOnMenuClose: boolean
   ) {
     this.menuId = menuId;
 
@@ -45,22 +35,22 @@ class OffCanvasMenu {
     this.closeSubmenusOnMenuClose = closeSubmenusOnMenuClose;
   }
 
-  body = document.querySelector("body");
-  iconOpen = document.querySelector("." + CLASSNAME_ICON_OPEN);
-  sidebar = document.querySelector("." + CLASSNAME_SIDEBAR);
+  body = document.querySelector("body") as HTMLElement;
+  iconOpen = document.querySelector("." + CSS_CLASSES.ICON_OPEN) as HTMLElement;
+  sidebar = document.querySelector("." + CSS_CLASSES.SIDEBAR) as HTMLElement;
 
   init() {
-    const mg = new MarkupGenerator("off-canvas-body");
+    const markupGenerator = new MarkupGenerator("off-canvas-body");
 
-    mg.init();
+    markupGenerator.init();
 
     this.waitForDomElement(".off-canvas-nav").then(() => {
       const linkLevel1 = document.querySelectorAll(
-        "." + CLASSNAME_LINK_LEVEL[1]
+        "." + CSS_CLASSES.LINK_LEVEL[1]
       );
 
       const linkLevel2 = document.querySelectorAll(
-        "." + CLASSNAME_LINK_LEVEL[2]
+        "." + CSS_CLASSES.LINK_LEVEL[2]
       );
 
       this.addEventsForLinks(linkLevel1, 1);
@@ -69,9 +59,12 @@ class OffCanvasMenu {
       this.setMenuTitle(MENU_TITLE);
     });
 
-    this.iconOpen.addEventListener("click", () => {
-      const iconClose = document.querySelector("." + CLASSNAME_ICON_CLOSE);
-      let closingItems = [iconClose];
+    const iconOpen = this.iconOpen as HTMLElement;
+
+    iconOpen.addEventListener("click", () => {
+      const iconClose = document.querySelector("." + CSS_CLASSES.ICON_CLOSE);
+      const closingItems = [];
+      closingItems.push(iconClose);
 
       this.openMenu(this.sidebar, this.body);
       this.addCloseEvents(closingItems, this.sidebar, this.body);
@@ -90,14 +83,22 @@ class OffCanvasMenu {
    * @param {object} sidebar - DOM Element which contains the menu.
    * @param {object} body - DOM Element which contains the body.
    */
-  addCloseEvents(closingItems, sidebar, body) {
+  addCloseEvents(
+    closingItems: (Element | null)[],
+    sidebar: HTMLElement,
+    body: HTMLElement
+  ) {
     if (this.closeMenuOnBackdropClick) {
-      const backdrop = document.querySelector("." + CLASSNAME_BACKDROP);
+      const backdrop = document.querySelector(
+        "." + CSS_CLASSES.BACKDROP
+      ) as HTMLElement;
       closingItems.push(backdrop);
     }
 
     for (let i = 0; i < closingItems.length; i++) {
-      closingItems[i].addEventListener("click", () => {
+      const currentClosingItem = closingItems[i] as HTMLElement;
+
+      currentClosingItem.addEventListener("click", () => {
         this.hideSidebar(sidebar);
         this.removeBackdropFromDom();
         this.makeBodyScrollable(body);
@@ -112,53 +113,47 @@ class OffCanvasMenu {
    * @param {NodeList} links - List of links.
    * @param {number} level - Number of level to add events for.
    */
-  addEventsForLinks(links, level) {
-    links &&
-    links.forEach((link) => {
-      link &&
-      link.addEventListener("click", (evt) => {
+  addEventsForLinks(links: any[] | NodeListOf<Element>, level: number) {
+    links?.forEach((link) => {
+      link?.addEventListener("click", (evt: Event) => {
         this.handleClickOnLevel(evt, level);
       });
     });
   }
 
   closeAllSubmenus() {
-    const submenuItems = document.querySelectorAll(
-      "." + CLASSNAME_SUBMENU_LEVEL[1],
-      "." + CLASSNAME_SUBMENU_LEVEL[2]
-    );
+    const cssClass =
+      "." +
+      CSS_CLASSES.SUBMENU_LEVEL[1] +
+      "," +
+      "." +
+      CSS_CLASSES.SUBMENU_LEVEL[2];
+    const submenuItems = document.querySelectorAll(cssClass);
 
     for (let i = 0; i < submenuItems.length; i++) {
-      submenuItems[i].style.display = "none";
+      const currentSubmenuItem = submenuItems[i] as HTMLElement;
+      currentSubmenuItem.style.display = "none";
     }
   }
 
-  /**
-   *
-   * @param {object} evt
-   * @param {number} level
-   */
-  handleClickOnLevel(evt, level) {
-    let isOpen =
-      evt.currentTarget.closest("." + CLASSNAME_LINK_LEVEL[level] + "")
-        .parentElement.nextElementSibling.style.display === "block";
+  handleClickOnLevel(evt: Event, level: number) {
+    const currentTarget = evt.currentTarget as Element;
+    const closestLink = currentTarget.closest(
+      "." + CSS_CLASSES.LINK_LEVEL[level]
+    ) as Element;
+    const parentElement = closestLink.parentElement as HTMLElement;
+    const nextElementSibling = parentElement.nextElementSibling as HTMLElement;
+    const isOpen = nextElementSibling.style.display === "block";
+    const firstChild = closestLink.childNodes[1] as HTMLElement;
 
     if (isOpen) {
-      evt.currentTarget.closest(
-        "." + CLASSNAME_LINK_LEVEL[level]
-      ).parentElement.nextElementSibling.style.display = "none";
-      evt.currentTarget
-        .closest("." + CLASSNAME_LINK_LEVEL[level])
-        .childNodes[1].classList.remove("rotate-90");
+      nextElementSibling.style.display = "none";
+      firstChild.classList.remove("rotate-90");
     } else {
       this.closeOtherSubmenus && this.closeAllSubmenus();
       this.closeOtherSubmenus && this.rotateMenuArrowsBack();
-      evt.currentTarget.closest(
-        "." + CLASSNAME_LINK_LEVEL[level]
-      ).parentElement.nextElementSibling.style.display = "block";
-      evt.currentTarget
-        .closest("." + CLASSNAME_LINK_LEVEL[level])
-        .childNodes[1].classList.add("rotate-90");
+      nextElementSibling.style.display = "block";
+      firstChild.classList.add("rotate-90");
     }
   }
 
@@ -166,8 +161,8 @@ class OffCanvasMenu {
    *
    * @param {object} sidebar - DOM Element which contains the menu.
    */
-  handleSidebar(sidebar) {
-    sidebar.className = CLASSNAME_SIDEBAR + " show";
+  handleSidebar(sidebar: HTMLElement) {
+    sidebar.className = CSS_CLASSES.SIDEBAR + " show";
     sidebar.style.visibility = "visible";
   }
 
@@ -175,15 +170,15 @@ class OffCanvasMenu {
    *
    * @param {object} sidebar - DOM Element which contains the menu.
    */
-  hideSidebar(sidebar) {
-    sidebar.className = CLASSNAME_SIDEBAR;
+  hideSidebar(sidebar: HTMLElement) {
+    sidebar.className = <string>CSS_CLASSES.SIDEBAR;
   }
 
   /**
    *
    * @param {object} body - DOM Element which contains the body.
    */
-  makeBodyScrollable(body) {
+  makeBodyScrollable(body: HTMLElement) {
     body.style.overflow = "";
   }
 
@@ -192,7 +187,7 @@ class OffCanvasMenu {
    * @param {object} sidebar - DOM Element which contains the menu.
    * @param {object} body - DOM Element which contains the body.
    */
-  openMenu(sidebar, body) {
+  openMenu(sidebar: HTMLElement, body: HTMLElement) {
     this.preventBodyFromScrolling(body);
     this.handleSidebar(sidebar);
     this.addBackdropToDom();
@@ -202,7 +197,7 @@ class OffCanvasMenu {
    *
    * @param {object} body - DOM Element which contains the body.
    */
-  preventBodyFromScrolling(body) {
+  preventBodyFromScrolling(body: { style: { overflow: string } }) {
     body.style.overflow = "hidden";
   }
 
@@ -212,23 +207,20 @@ class OffCanvasMenu {
   }
 
   rotateMenuArrowsBack() {
-    let menuArrows = document.querySelectorAll("." + CLASSNAME_ARROW);
+    let menuArrows = document.querySelectorAll("." + CSS_CLASSES.ARROW);
     let len = menuArrows.length;
 
     for (let i = 0; i < len; i++) {
-      menuArrows[i].className = CLASSNAME_ARROW;
+      menuArrows[i].className = <string>CSS_CLASSES.ARROW;
     }
   }
 
-  /**
-   * @param {string} title
-   */
-  setMenuTitle(title) {
-    const headline = document.querySelector(".off-canvas-title");
+  setMenuTitle(title: string) {
+    const headline = document.querySelector(".off-canvas-title") as HTMLElement;
     headline.innerHTML = title;
   }
 
-  waitForDomElement(selector) {
+  waitForDomElement(selector: string) {
     return new Promise((resolve) => {
       if (document.querySelector(selector)) {
         return resolve(document.querySelector(selector));
@@ -243,7 +235,7 @@ class OffCanvasMenu {
 
       observer.observe(document.body, {
         childList: true,
-        subtree: true
+        subtree: true,
       });
     });
   }
