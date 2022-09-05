@@ -1,40 +1,19 @@
 @use "sass:color";
 
-// shades of gray
-$alabaster: #f8f8f8;
-$alto: #babab5;
-$athens-gray: #e9ecef;
+// Shades of gray
 $gray: #838383;
-$spun-pearl: #aaaaaf;
 $main-font-color: #4e565f;
-$oslo-gray: #828a92;
 $trout: #4b545d;
 $white: #fff;
 
-// shades of black
+// Shades of black
 $black: #000;
-$black-06: rgb(0 0 0 / 60%);
-$black-07: rgb(0 0 0 / 70%);
-$black-08: rgb(0 0 0 / 80%);
-$black-09: rgb(0 0 0 / 90%);
 
-// blue
-$lochmara: #027cd2;
+// Blue
 $dodger-blue: #3090f7;
 $picton-blue: #2f8fe9;
 
-// body
-$body-text-color: $gray;
-
-// link colors
-$header-color: $white;
-$hover-color-2: #595959;
-$hover-color: $white;
-$link-color: #838383;
-
-// menu colors
+// Menu colors
 $ocm-color: $dodger-blue;
 $ocm-color-dark: color.adjust($ocm-color, $lightness: -12%);
-$ocm-color-light: color.adjust($ocm-color, $lightness: 8%);
-$main-accent-color: $dodger-blue;
 $ui-color-1: $picton-blue;

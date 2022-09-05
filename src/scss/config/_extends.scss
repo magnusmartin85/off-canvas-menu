@@ -1,7 +1,7 @@
 @mixin links($link, $visited, $hover, $active) {
   color: $link;
   text-decoration: none;
-
+ 
   &:visited {
     color: $visited;
   }
