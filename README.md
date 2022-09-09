@@ -1,6 +1,6 @@
-# Off-Canvas Menu
+# Off-Canvas-Menu
 
-This is a simple JavaScript Off-Canvas Menu.
+This is a simple JavaScript Off-Canvas-Menu.
 
 ## Installation
 
@@ -13,6 +13,7 @@ To serve on localhost run `npm run start` on the command line.
 ## Build
 
 For a production build run `npm run build` on the command line.
+This will generate a `public` directory with `index.html` and minified `off-canvas-menu.js`.
 
 ## Demo
 
