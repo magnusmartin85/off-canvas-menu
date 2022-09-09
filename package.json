@@ -10,18 +10,18 @@
   "license": "ISC",
   "homepage": "off-canvas-menu.mgnmrt.com",
   "devDependencies": {
-    "copy-webpack-plugin": "^10.2.0",
-    "css-loader": "^6.5.1",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
-    "html-loader": "^3.1.0",
-    "prettier": "2.6.2",
-    "sass-loader": "^12.4.0",
+    "html-loader": "^4.1.0",
+    "prettier": "2.7.1",
+    "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.6",
     "ts-loader": "^9.3.1",
-    "webpack": "^5.66.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.3",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.0",
     "webpack-merge": "^5.8.0"
   }
 }
