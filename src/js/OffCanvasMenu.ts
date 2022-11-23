@@ -1,5 +1,5 @@
-import { CSS_CLASSES, MENU_TITLE } from "./constants";
 import MarkupGenerator from "./MarkupGenerator/MarkupGenerator";
+import { CSS_CLASSES, MENU_TITLE } from "./constants";
 
 class OffCanvasMenu {
   private menuId: string;
@@ -235,7 +235,7 @@ class OffCanvasMenu {
 
       observer.observe(document.body, {
         childList: true,
-        subtree: true,
+        subtree: true
       });
     });
   }

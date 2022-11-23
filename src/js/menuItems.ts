@@ -3,7 +3,7 @@ const menuItems = [
     level: 0,
     title: "Home",
     href: "#",
-    children: [],
+    children: []
   },
   {
     level: 0,
@@ -19,23 +19,23 @@ const menuItems = [
             level: 2,
             title: "Screendesign",
             href: "#",
-            children: [],
-          },
-        ],
+            children: []
+          }
+        ]
       },
       {
         level: 1,
         title: "Webdesign",
         href: "#",
-        children: [],
+        children: []
       },
       {
         level: 1,
         title: "Content Marketing",
         href: "#",
-        children: [],
-      },
-    ],
+        children: []
+      }
+    ]
   },
   {
     level: 0,
@@ -46,28 +46,28 @@ const menuItems = [
         level: 1,
         title: "John",
         href: "#",
-        children: [],
+        children: []
       },
       {
         level: 1,
         title: "Peter",
         href: "#",
-        children: [],
+        children: []
       },
       {
         level: 1,
         title: "Michael",
         href: "#",
-        children: [],
-      },
-    ],
+        children: []
+      }
+    ]
   },
   {
     level: 0,
     title: "Contact",
     href: "#",
-    children: [],
-  },
+    children: []
+  }
 ];
 
 export { menuItems };

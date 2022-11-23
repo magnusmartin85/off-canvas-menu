@@ -10,12 +10,12 @@ const CSS_CLASSES: CssClassesProps = {
   SIDEBAR: "off-canvas",
   SUBMENU_LEVEL: {
     1: "list-level-1",
-    2: "list-level-2",
+    2: "list-level-2"
   },
   LINK_LEVEL: {
     1: "link-level-1",
-    2: "link-level-2",
-  },
+    2: "link-level-2"
+  }
 };
 
 // Appears in the Off-Canvas Menu header

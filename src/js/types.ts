@@ -1,8 +1,3 @@
-export type ClosingItemsProps = {
-  backdrop?: HTMLElement;
-  iconClose?: HTMLElement;
-}[];
-
 export type CssClassesProps = {
   [key: string]: string | { [key: number]: string };
 };

@@ -1,9 +1,9 @@
-import { menuItems } from "../menuItems";
 import { MenuItemProps } from "../types";
+import { menuItems } from "../menuItems";
 
 class MarkupGenerator {
   private readonly parentElementName: string;
- 
+
   constructor(parentElementName: string) {
     this.parentElementName = parentElementName;
   }
