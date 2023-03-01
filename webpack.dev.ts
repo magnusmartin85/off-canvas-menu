@@ -4,13 +4,14 @@ import webpackCommon from "./webpack.common";
 import { merge } from "webpack-merge";
 import { paths } from "./paths";
 
-const config: webpack.Configuration = merge(webpackCommon, {
+const config: webpack.Configuration = merge(webpackCommon.config, {
   stats: {
     errorDetails: true
   },
   mode: "development",
   devtool: "inline-source-map",
   devServer: {
+    watchFiles: paths.src.root,
     static: {
       directory: paths.dest.root
     },

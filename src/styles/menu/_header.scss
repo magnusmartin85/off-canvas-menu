@@ -1,0 +1,9 @@
+@use "sass:map";
+
+.off-canvas-header {
+  align-items: center;
+  background-color: map.get($menu-colors, "header-bg-color");
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+}

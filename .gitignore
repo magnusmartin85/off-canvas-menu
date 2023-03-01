@@ -1,8 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
+/core/public
 /public
-/dist
 /tmp
 /out-tsc
 

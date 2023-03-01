@@ -1,0 +1,32 @@
+@use "sass:map";
+
+@mixin links($link, $visited, $hover, $active) {
+  color: $link;
+  text-decoration: none;
+
+  &:visited {
+    color: $visited;
+  }
+
+  &:hover {
+    color: $hover;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &:active,
+  &:focus {
+    color: $hover;
+    text-decoration: none;
+  }
+}
+
+%link-regular {
+  @include links(
+    map.get($text-colors, "copy"),
+    map.get($text-colors, "copy"),
+    map.get($text-colors, "link"),
+    map.get($text-colors, "link")
+  );
+  padding: 10px;
+}

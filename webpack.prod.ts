@@ -3,7 +3,7 @@ import TerserPlugin from "terser-webpack-plugin";
 import webpackCommon from "./webpack.common";
 import { merge } from "webpack-merge";
 
-const config: webpack.Configuration = merge(webpackCommon, {
+const config: webpack.Configuration = merge(webpackCommon.config, {
   mode: "production",
   optimization: {
     minimize: true,

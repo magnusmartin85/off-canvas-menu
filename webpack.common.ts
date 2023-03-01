@@ -1,14 +1,14 @@
 import * as webpack from "webpack";
 import { paths } from "./paths";
 import CopyPlugin = require("copy-webpack-plugin");
-
+ 
 const config: webpack.Configuration = {
-  entry: paths.src.js + "/index.ts",
+  entry: `${paths.src.scripts}/index.ts`,
   plugins: [
     new CopyPlugin({
       patterns: [
         {
-          from: paths.src.root + "/index.html",
+          from: `${paths.src.root}/index.html`,
           to: ""
         }
       ]
@@ -20,15 +20,13 @@ const config: webpack.Configuration = {
   module: {
     rules: [
       {
-        test: /\.scss$/i,
-        use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader"
-        ]
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        type: "asset/resource",
+        generator: {
+          filename: "off-canvas-menu.css"
+        },
+        use: ["sass-loader"]
       },
       {
         test: /\.tsx?$/,
@@ -39,8 +37,9 @@ const config: webpack.Configuration = {
   },
   output: {
     filename: "off-canvas-menu.js",
-    path: paths.dest.root
+    path: paths.dest.root,
+    clean: true
   }
 };
 
-export default config;
+export default { config };
