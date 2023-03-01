@@ -1,0 +1,24 @@
+.off-canvas {
+  background-clip: padding-box;
+  background-color: $white;
+  border-right: 1px solid rgb(0 0 0 / 20%);
+  bottom: 0;
+  box-shadow: rgb(0 0 0 / 20%) 0 8px 10px -5px, rgb(0 0 0 / 14%) 0 16px 24px 2px,
+  rgb(0 0 0 / 12%) 0 6px 30px 5px;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  max-width: 100%;
+  outline: 0;
+  position: fixed;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  visibility: hidden;
+  width: 400px;
+  z-index: 1050;
+
+  &.show {
+    transform: none;
+  }
+}

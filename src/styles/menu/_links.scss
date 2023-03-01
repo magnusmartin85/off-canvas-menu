@@ -1,0 +1,27 @@
+@use "sass:color";
+
+@import "../config/extends";
+
+.link-level-1 {
+  @extend %link-regular;
+  align-items: center;
+  display: flex;
+  font-weight: 600;
+}
+
+.link-level-2,
+.link-level-3 {
+  @extend %link-regular;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+}
+
+.content-link {
+  @include links(
+    $theme-color,
+    $theme-color,
+    color.adjust($theme-color, $lightness: 10%),
+    color.adjust($theme-color, $lightness: 10%)
+  );
+}
