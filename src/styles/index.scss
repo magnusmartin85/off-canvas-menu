@@ -1,3 +1,6 @@
+// Theme
+@import "theme";
+
 // Config
 @import "config/index";
 
@@ -5,7 +8,4 @@
 @import "icons/index";
 
 // Core
-@import "core/index";
-
-// Misc
-@import "helper";
+@import "menu/index";
