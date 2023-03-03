@@ -1,7 +1,7 @@
 import * as webpack from "webpack";
 import { paths } from "./paths";
 import CopyPlugin = require("copy-webpack-plugin");
- 
+
 const config: webpack.Configuration = {
   entry: `${paths.src.scripts}/index.ts`,
   plugins: [
@@ -9,7 +9,7 @@ const config: webpack.Configuration = {
       patterns: [
         {
           from: `${paths.src.root}/index.html`,
-          to: ""
+          to: paths.dest.root
         }
       ]
     })
