@@ -1,5 +1,4 @@
-import MarkupGenerator from "./MarkupGenerator";
-import { CSS_CLASSES, MENU_TITLE } from "./constants";
+import { CSS_CLASSES } from "./constants";
 
 class OffCanvasMenu {
   private readonly closeOtherSubMenus: boolean;
@@ -19,7 +18,7 @@ class OffCanvasMenu {
     this.closeOtherSubMenus = closeOtherSubMenus || false;
 
     /**
-     * Close menu after click on backdrop (css class 'off-canvas-backdrop).
+     * Close menu after click on backdrop (css class 'off-canvas-backdrop').
      * @type {boolean}
      */
     this.closeMenuOnBackdropClick = closeMenuOnBackdropClick || true;
@@ -36,24 +35,16 @@ class OffCanvasMenu {
   sidebar = document.querySelector("." + CSS_CLASSES.SIDEBAR) as HTMLElement;
 
   init() {
-    const markupGenerator = new MarkupGenerator("off-canvas-body");
+    const linkLevel1 = document.querySelectorAll(
+      "." + CSS_CLASSES.LINK_LEVEL[1]
+    );
 
-    markupGenerator.init();
+    const linkLevel2 = document.querySelectorAll(
+      "." + CSS_CLASSES.LINK_LEVEL[2]
+    );
 
-    this.waitForDomElement(".off-canvas-nav").then(() => {
-      const linkLevel1 = document.querySelectorAll(
-        "." + CSS_CLASSES.LINK_LEVEL[1]
-      );
-
-      const linkLevel2 = document.querySelectorAll(
-        "." + CSS_CLASSES.LINK_LEVEL[2]
-      );
-
-      this.addEventsForLinks(linkLevel1, 1);
-      this.addEventsForLinks(linkLevel2, 2);
-
-      this.setMenuTitle(MENU_TITLE);
-    });
+    this.addEventsForLinks(linkLevel1, 1);
+    this.addEventsForLinks(linkLevel2, 2);
 
     const iconOpen = this.iconOpen as HTMLElement;
 
