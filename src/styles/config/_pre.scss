@@ -1,0 +1,10 @@
+@use "sass:map";
+
+pre {
+  background-color: map.get($code-colors, "background");
+  border-radius: 4px;
+  color: map.get($code-colors, "text");
+  font-family: map.get($font-family, "code");
+  font-weight: 500;
+  padding: 2rem;
+}
