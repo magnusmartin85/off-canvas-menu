@@ -3,17 +3,17 @@ export type CssClassesProps = {
 };
 
 export type MenuItemProps = {
+  children?: MenuItemChildrenProps;
+  href: string;
   level: number;
   title: string;
-  href: string;
-  children?: MenuItemChildrenProps;
 };
 
 export type MenuItemChildProps = {
+  children?: MenuItemChildrenProps;
+  href: string;
   level: number;
   title: string;
-  href: string;
-  children?: MenuItemChildrenProps;
 };
 
 export type MenuItemChildrenProps = MenuItemChildProps[];
