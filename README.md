@@ -1,6 +1,6 @@
-# Off-Canvas-Menu
+# Off-Canvas Menu
 
-This is a simple JavaScript Off-Canvas-Menu.
+> Simple JavaScript Off-Canvas Menu.
 
 ## Features
 
@@ -111,3 +111,21 @@ This will generate a `dist` directory with `index.html`, `off-canvas-menu.js` an
 ## Demo
 
 [Demo](http://off-canvas-menu.mgnmrt.com)
+
+## Built with
+
+### [TypeScript](https://www.typescriptlang.org/)
+
+TypeScript is JavaScript with syntax for types.
+
+### [Sass](https://sass-lang.com/)
+
+CSS with superpowers.
+
+### [webpack](https://webpack.js.org/)
+
+Module Bundler for JavaScript.
+
+## Author
+
+[Magnus Martin](https://mgnmrt.com/)
