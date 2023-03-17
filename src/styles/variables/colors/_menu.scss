@@ -1,0 +1,7 @@
+@use "sass:color";
+
+$menu-colors: (
+  "container-bg-color": $white,
+  "header-bg-color": color.adjust($theme-color, $lightness: -12%),
+  "active-menu-item": color.adjust($theme-color, $lightness: -12%)
+);

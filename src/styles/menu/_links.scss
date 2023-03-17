@@ -1,8 +1,14 @@
 @use "sass:color";
+@use "sass:map";
 @import "../config/extends";
 
 .link-level-1 {
-  @extend %link-regular;
+  @include links(
+    map.get($menu-colors, "active-menu-item"),
+    map.get($menu-colors, "active-menu-item"),
+    map.get($menu-colors, "active-menu-item"),
+    map.get($menu-colors, "active-menu-item")
+  );
 
   align-items: center;
   display: flex;
@@ -11,7 +17,12 @@
 
 .link-level-2,
 .link-level-3 {
-  @extend %link-regular;
+  @include links(
+    map.get($menu-colors, "active-menu-item"),
+    map.get($menu-colors, "active-menu-item"),
+    map.get($menu-colors, "active-menu-item"),
+    map.get($menu-colors, "active-menu-item")
+  );
 
   align-items: center;
   display: flex;
